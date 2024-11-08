@@ -14,7 +14,6 @@ const App: React.FC = () => {
         },
       })
       .then((response) => {
-        console.log(response.data);
         setResponseData(response.data);
       })
       .catch((error) => {
