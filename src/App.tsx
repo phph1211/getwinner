@@ -10,7 +10,7 @@ const App: React.FC = () => {
     axios
       .get("https://esports.hanum.us/luckydraw/getWinner", {
         headers: {
-          "get-winner-key": import.meta.env.VITE_API_SECRET_KEY,
+          secret: import.meta.env.VITE_API_SECRET_KEY,
         },
       })
       .then((response) => {
