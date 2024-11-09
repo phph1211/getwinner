@@ -22,12 +22,12 @@ body {
   filter: contrast(20);
   background-color: black;
   overflow: hidden;
+  z-index: 1; /* 비디오 위로 오게 설정 */
 }
 
 .winner {
   color: rgb(230, 255, 230);
   font-size: 3rem;
-
   line-height: 1;
   filter: blur(0.2rem);
   display: block;
@@ -52,6 +52,7 @@ span {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 span:nth-child(1) {
   animation: letteranim 12s ease;
   animation-delay: 0s;
@@ -118,4 +119,15 @@ span:nth-child(11) {
     opacity: 0;
     filter: blur(0.6rem);
   }
+}
+
+/* 비디오 스타일 */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 화면을 꽉 채우도록 설정 */
+  z-index: -1; /* 비디오가 배경으로 오도록 설정 */
 }
