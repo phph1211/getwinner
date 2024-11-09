@@ -7,6 +7,12 @@ body {
   overflow: hidden;
 }
 
+@font-face {
+  font-family: "winner";
+  font-weight: bold;
+  src: url("./assets/STUNNING.ttf") format("truetype");
+}
+
 .container {
   top: 0;
   left: 0;
@@ -21,11 +27,12 @@ body {
 .winner {
   color: rgb(230, 255, 230);
   font-size: 3rem;
-  font-weight: 700;
+
   line-height: 1;
   filter: blur(0.2rem);
   display: block;
   filter: contrast(20);
+  font-family: "winner";
 }
 
 span {

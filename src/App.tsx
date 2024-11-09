@@ -67,6 +67,7 @@ const App: React.FC = () => {
         <span>1</span>
         <span>0</span>
       </div>
+
       {responseData && responseData.data && (
         <div
           style={{
@@ -83,7 +84,6 @@ const App: React.FC = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                fontFamily: "revert",
               }}
             >
               <div>{winner.userName || "No Name"}</div>
