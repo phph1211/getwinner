@@ -67,7 +67,7 @@ const App: React.FC = () => {
         <span>1</span>
         <span>0</span>
       </div>
-      {responseData && (
+      {responseData && responseData.data && (
         <div
           style={{
             color: "white",
@@ -75,30 +75,21 @@ const App: React.FC = () => {
             gap: "10em",
           }}
         >
-          <div
-            className="winner"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <div>{responseData.data[0].userName}</div>
-            <div>{responseData.data[0].userSchool}</div>
-            <div>{responseData.data[0].userStudentNumber}</div>
-          </div>
-          <div
-            className="winner"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <div>{responseData.data[1].userName}</div>
-            <div>{responseData.data[1].userSchool}</div>
-            <div>{responseData.data[1].userStudentNumber}</div>
-          </div>
+          {responseData.data.slice(0, 2).map((winner: any, index: number) => (
+            <div
+              key={index}
+              className="winner"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <div>{winner.userName || "No Name"}</div>
+              <div>{winner.userSchool || "No School"}</div>
+              <div>{winner.userStudentNumber || "No Student Number"}</div>
+            </div>
+          ))}
         </div>
       )}
     </div>
