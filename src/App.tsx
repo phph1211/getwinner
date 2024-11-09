@@ -38,9 +38,9 @@ const App: React.FC = () => {
 
     setTimeout(() => {
       setIsEnd(true);
-    }, 11500);
+    }, 12500);
 
-    const countdownInterval = setInterval(updateCountdown, 1000);
+    const countdownInterval = setInterval(updateCountdown, 1100);
 
     return () => clearInterval(countdownInterval);
   }, []);
@@ -83,6 +83,7 @@ const App: React.FC = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
+                fontFamily: "revert",
               }}
             >
               <div>{winner.userName || "No Name"}</div>
